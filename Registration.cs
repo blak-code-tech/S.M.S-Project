@@ -10,25 +10,28 @@ using System.Windows.Forms;
 
 namespace S.M.S_Project
 {
-    public partial class LoginPage : Form
+    public partial class Registration : Form
     {
-        public LoginPage()
+        public Registration()
         {
             InitializeComponent();
         }
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            SalesManagement sales = new SalesManagement();
-            sales.Show();
+            LoginPage lp = new LoginPage();
+            lp.Show();
             this.Hide();
         }
 
-        private void bunifuButton2_Click(object sender, EventArgs e)
+        private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
         {
-            Registration reg = new Registration();
-            reg.Show();
-            this.Hide();
+
+        }
+
+        private void bunifuTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
