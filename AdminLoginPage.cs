@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace S.M.S_Project
 {
-    public partial class LoginPage : Form
+    public partial class AdminLoginPage : Form
     {
-        public LoginPage()
+        public AdminLoginPage()
         {
             InitializeComponent();
         }
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            SalesManagement sales = new SalesManagement();
-            sales.Show();
+            ProductManagement pm = new ProductManagement();
+            pm.Show();
             this.Hide();
         }
 
@@ -29,6 +29,18 @@ namespace S.M.S_Project
             Registration reg = new Registration();
             reg.Show();
             this.Hide();
+        }
+
+        private void bunifuLabel3_Click(object sender, EventArgs e)
+        {
+            ChooseUserPage cup = new ChooseUserPage();
+            cup.Show();
+            this.Close();
+        }
+
+        private void CloseTxt_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,7 +24,7 @@ namespace S.M.S_Project
         {
             tmr = new Timer();
             //set time interval 3 sec
-            tmr.Interval = 3000;
+            tmr.Interval = 5000;
             //starts the timer
             tmr.Start();
             tmr.Tick += tmr_Tick;
@@ -35,8 +35,8 @@ namespace S.M.S_Project
             //after 3 sec stop the timer
             tmr.Stop();
             //display login page
-            LoginPage lp = new LoginPage();
-            lp.Show();
+            ChooseUserPage cup = new ChooseUserPage();
+            cup.Show();
             //hide this form
             this.Hide();
         }

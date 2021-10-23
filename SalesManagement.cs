@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +15,16 @@ namespace S.M.S_Project
         public SalesManagement()
         {
             InitializeComponent();
+        }
+
+        private void CloseTxt_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void SalesManagement_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -151,11 +151,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoginPage.cs">
+    <Compile Include="AttendantLoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginPage.Designer.cs">
-      <DependentUpon>LoginPage.cs</DependentUpon>
+    <Compile Include="AttendantLoginPage.Designer.cs">
+      <DependentUpon>AttendantLoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseUserPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseUserPage.Designer.cs">
+      <DependentUpon>ChooseUserPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLoginPage.Designer.cs">
+      <DependentUpon>AdminLoginPage.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductManagement.cs">
       <SubType>Form</SubType>
@@ -183,8 +195,14 @@
     <Compile Include="SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="LoginPage.resx">
-      <DependentUpon>LoginPage.cs</DependentUpon>
+    <EmbeddedResource Include="AttendantLoginPage.resx">
+      <DependentUpon>AttendantLoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseUserPage.resx">
+      <DependentUpon>ChooseUserPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminLoginPage.resx">
+      <DependentUpon>AdminLoginPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductManagement.resx">
       <DependentUpon>ProductManagement.cs</DependentUpon>

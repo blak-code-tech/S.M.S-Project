@@ -10,40 +10,35 @@ using System.Windows.Forms;
 
 namespace S.M.S_Project
 {
-    public partial class Registration : Form
+    public partial class AttendantLoginPage : Form
     {
-        public Registration()
+        public AttendantLoginPage()
         {
             InitializeComponent();
         }
 
-        private void bunifuButton1_Click(object sender, EventArgs e)
-        {
-            AdminLoginPage lp = new AdminLoginPage();
-            lp.Show();
-            this.Hide();
-        }
-
-        private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox2_TextChanged(object sender, EventArgs e)
+        private void bunifuLabel1_Click(object sender, EventArgs e)
         {
 
         }
 
         private void bunifuLabel3_Click(object sender, EventArgs e)
         {
-            AdminLoginPage admin = new AdminLoginPage();
-            admin.Show();
+            ChooseUserPage cup = new ChooseUserPage();
+            cup.Show();
             this.Close();
         }
 
         private void CloseTxt_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void LoginBtn_Click(object sender, EventArgs e)
+        {
+            SalesManagement sales = new SalesManagement();
+            sales.Show();
+            this.Hide();
         }
     }
 }
