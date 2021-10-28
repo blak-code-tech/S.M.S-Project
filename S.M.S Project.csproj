@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Bunifu.Dataviz.WinForms, Version=2.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
       <HintPath>packages\Bunifu.Dataviz.WinForms.2.2.0\lib\Bunifu.Dataviz.WinForms.dll</HintPath>
     </Reference>
@@ -138,8 +139,23 @@
     <Reference Include="Bunifu.UI.WinForms.Deprecated, Version=5.2.2.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
       <HintPath>packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -151,11 +167,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddProductPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProductPage.Designer.cs">
+      <DependentUpon>AddProductPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin.cs">
+      <DependentUpon>SMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AddCategoryPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCategoryPage.Designer.cs">
+      <DependentUpon>AddCategoryPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="attendant.cs">
+      <DependentUpon>SMSModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="AttendantLoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AttendantLoginPage.Designer.cs">
       <DependentUpon>AttendantLoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="category.cs">
+      <DependentUpon>SMSModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ChooseUserPage.cs">
       <SubType>Form</SubType>
@@ -168,6 +205,12 @@
     </Compile>
     <Compile Include="AdminLoginPage.Designer.cs">
       <DependentUpon>AdminLoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="history.cs">
+      <DependentUpon>SMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="product.cs">
+      <DependentUpon>SMSModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ProductManagement.cs">
       <SubType>Form</SubType>
@@ -189,12 +232,38 @@
     <Compile Include="SalesManagement.Designer.cs">
       <DependentUpon>SalesManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="smsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>smsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SMSModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SMSModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SMSModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SMSModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SMSModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddCategoryPage.resx">
+      <DependentUpon>AddCategoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProductPage.resx">
+      <DependentUpon>AddProductPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AttendantLoginPage.resx">
       <DependentUpon>AttendantLoginPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -236,9 +305,42 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="SMSModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SMSModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="smsDataSet.xsc">
+      <DependentUpon>smsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="smsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>smsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="smsDataSet.xss">
+      <DependentUpon>smsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SMSModel.edmx.diagram">
+      <DependentUpon>SMSModel.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SMSModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SMSModel.Context.cs</LastGenOutput>
+      <DependentUpon>SMSModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="SMSModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SMSModel.edmx</DependentUpon>
+      <LastGenOutput>SMSModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -37,9 +37,10 @@ namespace S.M.S_Project
             this.AdminBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.AttendantBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.CloseTxt = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
             this.Titlebar = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.CloseTxt = new Bunifu.UI.WinForms.BunifuLabel();
             this.Titlebar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -254,25 +255,6 @@ namespace S.M.S_Project
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // CloseTxt
-            // 
-            this.CloseTxt.AllowParentOverrides = false;
-            this.CloseTxt.AutoEllipsis = false;
-            this.CloseTxt.AutoSize = false;
-            this.CloseTxt.CursorType = System.Windows.Forms.Cursors.Default;
-            this.CloseTxt.Dock = System.Windows.Forms.DockStyle.Right;
-            this.CloseTxt.Font = new System.Drawing.Font("Segoe UI", 27.75F);
-            this.CloseTxt.ForeColor = System.Drawing.Color.OrangeRed;
-            this.CloseTxt.Location = new System.Drawing.Point(844, 0);
-            this.CloseTxt.Name = "CloseTxt";
-            this.CloseTxt.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.CloseTxt.Size = new System.Drawing.Size(40, 40);
-            this.CloseTxt.TabIndex = 5;
-            this.CloseTxt.Text = "×";
-            this.CloseTxt.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.CloseTxt.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.CloseTxt.Click += new System.EventHandler(this.CloseTxt_Click);
-            // 
             // bunifuFormDock1
             // 
             this.bunifuFormDock1.AllowFormDragging = true;
@@ -322,6 +304,7 @@ namespace S.M.S_Project
             this.Titlebar.BorderRadius = 5;
             this.Titlebar.BorderThickness = 1;
             this.Titlebar.Controls.Add(this.CloseTxt);
+            this.Titlebar.Controls.Add(this.bunifuSeparator2);
             this.Titlebar.Dock = System.Windows.Forms.DockStyle.Top;
             this.Titlebar.Location = new System.Drawing.Point(0, 0);
             this.Titlebar.Name = "Titlebar";
@@ -329,10 +312,42 @@ namespace S.M.S_Project
             this.Titlebar.Size = new System.Drawing.Size(884, 40);
             this.Titlebar.TabIndex = 6;
             // 
+            // bunifuSeparator2
+            // 
+            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator2.BackgroundImage")));
+            this.bunifuSeparator2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator2.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bunifuSeparator2.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator2.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator2.LineThickness = 1;
+            this.bunifuSeparator2.Location = new System.Drawing.Point(0, 35);
+            this.bunifuSeparator2.Name = "bunifuSeparator2";
+            this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator2.Size = new System.Drawing.Size(884, 5);
+            this.bunifuSeparator2.TabIndex = 16;
+            // 
+            // CloseTxt
+            // 
+            this.CloseTxt.AllowParentOverrides = false;
+            this.CloseTxt.AutoEllipsis = false;
+            this.CloseTxt.AutoSize = false;
+            this.CloseTxt.CursorType = null;
+            this.CloseTxt.Font = new System.Drawing.Font("Segoe UI", 27.75F);
+            this.CloseTxt.ForeColor = System.Drawing.Color.OrangeRed;
+            this.CloseTxt.Location = new System.Drawing.Point(844, 0);
+            this.CloseTxt.Name = "CloseTxt";
+            this.CloseTxt.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CloseTxt.Size = new System.Drawing.Size(40, 37);
+            this.CloseTxt.TabIndex = 17;
+            this.CloseTxt.Text = "×";
+            this.CloseTxt.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CloseTxt.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // ChooseUserPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(884, 461);
             this.Controls.Add(this.Titlebar);
@@ -354,8 +369,9 @@ namespace S.M.S_Project
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton AdminBtn;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton AttendantBtn;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private Bunifu.UI.WinForms.BunifuLabel CloseTxt;
         private Bunifu.UI.WinForms.BunifuPanel Titlebar;
         private Bunifu.UI.WinForms.BunifuFormDock bunifuFormDock1;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
+        private Bunifu.UI.WinForms.BunifuLabel CloseTxt;
     }
 }
