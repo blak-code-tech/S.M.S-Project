@@ -12,6 +12,7 @@ namespace S.M.S_Project
 {
     public partial class AddCategoryPage : Form
     {
+        private category categoryModel = new category();
         public AddCategoryPage()
         {
             InitializeComponent();
@@ -20,6 +21,27 @@ namespace S.M.S_Project
         private void closeBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void addBtn_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(nameTxt.Text))
+            {
+                string msg = "Please make sure all the fields are filled.";
+                MessageBox.Show(msg, "Error");
+            }
+            else
+            {
+                using (var db = new smsEntities())
+                {
+                    categoryModel.category1 = nameTxt.Text;
+                    db.categories.Add(categoryModel);
+                    db.SaveChanges();
+                    string msg = "Category Created Successfully.";
+                    MessageBox.Show(msg, "Success");
+                    nameTxt.Text = "";
+                }
+            }
         }
     }
 }

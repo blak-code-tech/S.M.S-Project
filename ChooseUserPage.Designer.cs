@@ -39,8 +39,8 @@ namespace S.M.S_Project
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
             this.Titlebar = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.CloseTxt = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.Titlebar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -312,22 +312,6 @@ namespace S.M.S_Project
             this.Titlebar.Size = new System.Drawing.Size(884, 40);
             this.Titlebar.TabIndex = 6;
             // 
-            // bunifuSeparator2
-            // 
-            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator2.BackgroundImage")));
-            this.bunifuSeparator2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator2.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bunifuSeparator2.LineColor = System.Drawing.Color.Silver;
-            this.bunifuSeparator2.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(0, 35);
-            this.bunifuSeparator2.Name = "bunifuSeparator2";
-            this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator2.Size = new System.Drawing.Size(884, 5);
-            this.bunifuSeparator2.TabIndex = 16;
-            // 
             // CloseTxt
             // 
             this.CloseTxt.AllowParentOverrides = false;
@@ -344,6 +328,23 @@ namespace S.M.S_Project
             this.CloseTxt.Text = "×";
             this.CloseTxt.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.CloseTxt.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.CloseTxt.Click += new System.EventHandler(this.CloseTxt_Click);
+            // 
+            // bunifuSeparator2
+            // 
+            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator2.BackgroundImage")));
+            this.bunifuSeparator2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator2.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bunifuSeparator2.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator2.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator2.LineThickness = 1;
+            this.bunifuSeparator2.Location = new System.Drawing.Point(0, 35);
+            this.bunifuSeparator2.Name = "bunifuSeparator2";
+            this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator2.Size = new System.Drawing.Size(884, 5);
+            this.bunifuSeparator2.TabIndex = 16;
             // 
             // ChooseUserPage
             // 

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -107,7 +108,7 @@ namespace S.M.S_Project
                         {
                             model = db.admins.Where(x => x.username == userNameTxt.Text).FirstOrDefault();
 
-                            string fn = model.name;
+                            File.WriteAllText("username.txt", model.name);
                         }
                         ProductManagement pm = new ProductManagement();
                         pm.Show();

@@ -19,6 +19,7 @@ namespace S.M.S_Project
         public int quantity { get; set; }
         public double cost { get; set; }
         public System.DateTime date { get; set; }
+        public string order_id { get; set; }
     
         public virtual product product1 { get; set; }
     }
